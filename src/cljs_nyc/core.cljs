@@ -1,20 +1,18 @@
-(ns cljs-nyc.core)
+(ns cljs-nyc.core
+  #_(:require [domina.css :refer [sel]]
+            [domina.events :as events])
+  (:import [goog.date DateTime Interval]
+           [goog.i18n DateTimeFormat]))
 
 (.log js/console "Hello!")
 
-(def node (.getElementById js/document "app"))
+#_(def f (DateTimeFormat. "EEEE MMMM d, y"))
 
-(def cljs-set #{})
-(def js-set (js/Set. (into-array (range 1e6))))
+#_(let [week (Interval. nil nil 7)
+      dt   (DateTime.)]
+  (.add dt week)
+  (.log js/console (.format f dt)))
 
-(println "JS Set" (. js-set -size))
-(dotimes [_ 10]
-  (time
-    (dotimes [_ 1e6]
-      (contains? js-set 500000))))
-
-(println "CLJS Set")
-(dotimes [_ 10]
-  (time
-    (dotimes [_ 1e6]
-      (contains? cljs-set node))))
+#_(events/listen! (sel "ul li") :click
+    (fn [e]
+      (.log js/console (-> e events/raw-event .-target))))

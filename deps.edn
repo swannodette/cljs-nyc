@@ -1,6 +1,7 @@
 {:deps {domina/domina {:mvn/version "1.0.3"}
-        org.clojure/clojurescript {:mvn/version "1.12.42"}}
+        org.clojure/clojurescript {:mvn/version "1.12.45"}}
  :aliases {:build   {:main-opts ["-m" "cljs.main" "-v" "-c" "cljs-nyc.core"]}
            :repl    {:main-opts ["-m" "cljs.main" "-c" "cljs-nyc.core" "-r"]}
            :release {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "build.edn" "-c" "cljs-nyc.core"]}
+           :server  {:main-opts ["-m" "cljs.main" "-s"]}
            :smap    {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "smap.edn" "-c" "cljs-nyc.core"]}}}
