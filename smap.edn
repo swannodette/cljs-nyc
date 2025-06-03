@@ -1,0 +1,6 @@
+{:output-to          "dist/main.js"
+ :source-map         "dist/main.js.map"
+ :closure-source-map true
+ :output-dir         "dist"
+ :parallel-build     true
+ :compiler-stats     true}

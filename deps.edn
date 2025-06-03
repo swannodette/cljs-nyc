@@ -2,4 +2,5 @@
         org.clojure/clojurescript {:mvn/version "1.12.42"}}
  :aliases {:build   {:main-opts ["-m" "cljs.main" "-v" "-c" "cljs-nyc.core"]}
            :repl    {:main-opts ["-m" "cljs.main" "-c" "cljs-nyc.core" "-r"]}
-           :release {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "build.edn" "-c" "cljs-nyc.core"]}}}
+           :release {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "build.edn" "-c" "cljs-nyc.core"]}
+           :smap    {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "smap.edn" "-c" "cljs-nyc.core"]}}}
