@@ -1,7 +1,7 @@
 # Deps
 
-Install source-map explorer
+Install the demo dev dependencies:
 
 ```shell
-
+npm install
 ```
