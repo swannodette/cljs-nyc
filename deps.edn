@@ -7,6 +7,9 @@
            :repl    {:main-opts ["-m" "cljs.main" "-c" "cljs-nyc.core" "-r"]}
            ;; Release
            :release {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "build.edn" "-c" "cljs-nyc.core"]}
+
+           ;; EXTRA STUFF
+
            ;; CLJS has a simple web server built in
            :server  {:main-opts ["-m" "cljs.main" "-s"]}
            ;; WIP Source Map Explorer support
