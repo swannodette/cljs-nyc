@@ -1,7 +1,14 @@
 {:deps {domina/domina {:mvn/version "1.0.3"}
         org.clojure/clojurescript {:mvn/version "1.12.45"}}
- :aliases {:build   {:main-opts ["-m" "cljs.main" "-v" "-c" "cljs-nyc.core"]}
+ :aliases {
+           ;; Build
+           :build   {:main-opts ["-m" "cljs.main" "-v" "-c" "cljs-nyc.core"]}
+           ;; A REPL
            :repl    {:main-opts ["-m" "cljs.main" "-c" "cljs-nyc.core" "-r"]}
+           ;; Release
            :release {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "build.edn" "-c" "cljs-nyc.core"]}
+           ;; CLJS has a simple web server built in
            :server  {:main-opts ["-m" "cljs.main" "-s"]}
-           :smap    {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "smap.edn" "-c" "cljs-nyc.core"]}}}
+           ;; WIP Source Map Explorer support
+           :smap    {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "smap.edn" "-c" "cljs-nyc.core"]}
+           }}
